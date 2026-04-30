@@ -370,9 +370,9 @@ In the following chapters, we will dive into the "brain" of AI and see how these
 
 ### 2.1 Opening: How Much Does It Actually Cost to Train a Large Model? (开篇：训练一个大模型到底要花多少钱？)
 
-Imagine you want to cultivate a "know-it-all" — someone who has read all the books, web pages, and papers in human history, who can write poetry, write code, translate, and solve math problems. How much would it cost to cultivate such a person? In the AI world, the answer is: **at least $78 million**.
+Imagine you want to cultivate a "know-it-all" — someone who has read all the books, web pages, and papers in human history, who can write poetry, write code, translate, and solve math problems. How much would it cost to cultivate such a person? In the AI world, the answer is: **at least $100 million**.
 
-According to Stanford University's 2025 AI Index Report and Epoch AI data, the training cost of GPT-4 was approximately $78 million, Google Gemini Ultra approximately $191 million, and Meta Llama 3.1 405B approximately $170 million. By 2026, the training cost of next-generation frontier models is expected to exceed **$1 billion**.
+According to Stanford University's 2025 AI Index Report and Epoch AI data, the training cost of GPT-4 exceeded $100 million (confirmed by Sam Altman), Google Gemini Ultra approximately $191 million, and Meta Llama 3.1 405B approximately $170 million. By 2026, the training cost of next-generation frontier models is expected to exceed **$1 billion**, with some industry estimates reaching the $3 billion range.
 
 **Analogy: Training a large model is like building a super library**
 
@@ -408,7 +408,7 @@ Through billions of prediction exercises, the model gradually "learns" the patte
 
 | Model | Training Data Volume | Training Tokens | Training Time | Estimated Cost |
 |-------|---------------------|-----------------|---------------|----------------|
-| GPT-4 | ~13 trillion Tokens | ~13T | 90-100 days | ~$78M |
+| GPT-4 | ~13 trillion Tokens | ~13T | 90-100 days | ~$100M+ |
 | Doubao Large Model | ~500TB | ~9T | Weeks to months | Undisclosed |
 | Llama 3.1 405B | 15 trillion Tokens | ~15T | Months | ~$170M |
 | Gemini Ultra | Undisclosed | Undisclosed | Months | ~$191M |
@@ -417,11 +417,11 @@ Through billions of prediction exercises, the model gradually "learns" the patte
 
 **Compute Consumption: The Speed of Burning Money**
 
-GPT-4's training used approximately 25,000 A100 GPUs running continuously for 90-100 days, with total compute consumption of approximately 2.15×10²⁵ FLOPS (floating-point operations). Even at A100 cloud service prices, GPU rental costs alone exceeded $60 million. Adding electricity, storage, networking, and personnel costs, the total easily surpassed $78 million.
+GPT-4's training used approximately 25,000 A100 GPUs running continuously for 90-100 days, with total compute consumption of approximately 2.15×10²⁵ FLOPS (floating-point operations). Even at A100 cloud service prices, GPU rental costs alone exceeded $60 million. Adding electricity, storage, networking, and personnel costs, the total easily surpassed $100 million.
 
-**Analogy: If $1 equals 1 second, how much is $78 million?**
+**Analogy: If $1 equals 1 second, how much is $100 million?**
 
-The answer is approximately **2.47 years**. That is, the training cost of GPT-4 is equivalent to the time value of a person working non-stop — without eating, sleeping, or resting — for two and a half years.
+The answer is approximately **3.17 years**. That is, the training cost of GPT-4 is equivalent to the time value of a person working non-stop — without eating, sleeping, or resting — for over three years.
 
 ### 2.3 Supervised Fine-Tuning (SFT): "On-the-Job Training" from Generalist to Specialist (监督微调（SFT）：从通才到专家的"岗前培训")
 
@@ -504,7 +504,7 @@ DistilBERT is a benchmark case for knowledge distillation. It uses BERT-base as 
 | Metric | BERT-base (Teacher) | DistilBERT (Student) | Change |
 |--------|---------------------|----------------------|--------|
 | Parameters | 110 million | 66 million | **40% reduction** |
-| Language Understanding | Baseline | 97% retained | Only 3% loss |
+| Language Understanding | Baseline | 95%+ retained | Less than 5% loss |
 | Inference Speed | Baseline | 60% faster | **60% faster** |
 | Training Cost | Baseline | Hundreds of times lower | Dramatically reduced |
 
@@ -736,7 +736,7 @@ flowchart LR
 
     subgraph Optimize["后续优化"]
         direction TB
-        D1["知识蒸馏<br/>参数减少40%，能力保留97%"] --> D2["INT8量化<br/>体积压缩75%，端侧部署"]
+        D1["知识蒸馏<br/>参数减少40%，能力保留95%以上"] --> D2["INT8量化<br/>体积压缩75%，端侧部署"]
         D2 --> D3["垂直领域适配<br/>四层架构"]
     end
 
