@@ -417,7 +417,7 @@ Through billions of prediction exercises, the model gradually "learns" the patte
 
 **Compute Consumption: The Speed of Burning Money**
 
-GPT-4's training used approximately 25,000 A100 GPUs running continuously for 90-100 days, with total compute consumption of approximately 2.15×10²⁵ FLOPS (floating-point operations). Even at A100 cloud service prices, GPU rental costs alone exceeded $60 million. Adding electricity, storage, networking, and personnel costs, the total easily surpassed $100 million.
+According to industry estimates, GPT-4's training used approximately 25,000 A100 GPUs running continuously for 90-100 days, with total compute consumption of approximately 2.15×10²⁵ FLOPS (floating-point operations). Even at A100 cloud service prices, GPU rental costs alone exceeded $60 million. Adding electricity, storage, networking, and personnel costs, the total easily surpassed $100 million.
 
 **Analogy: If $1 equals 1 second, how much is $100 million?**
 
@@ -457,7 +457,7 @@ If SFT teaches AI "how to speak," then RLHF teaches AI "what should be said and 
 
 **A Brief Introduction to the PPO Algorithm (Plain Language Version)**
 
-The core algorithm of RLHF is **PPO (Proximal Policy Optimization)**. Let's use a plain-language analogy to understand it:
+The core algorithm of RLHF is **PPO (Proximal Policy Optimization)**. In recent years, **DPO (Direct Preference Optimization)** and other lighter-weight alternatives have become increasingly mainstream — DPO doesn't require training a separate reward model, instead directly adjusting model parameters using human preference data, making it simpler and more stable. It has been widely adopted by Llama 3, Qwen 2, and others. Let's first use PPO to understand the principles of RLHF:
 
 Imagine you're training a dog:
 1. **Policy Model**: This is the dog, which needs to learn which behaviors earn rewards
@@ -540,7 +540,7 @@ Through INT8 quantization combined with other optimization techniques (such as K
 
 ### 2.7 Four-Layer Architecture for Vertical Domain Models (垂直领域大模型四层架构)
 
-While general-purpose large models are powerful, they are often not specialized enough for specific domains (healthcare, law, finance, etc.). The construction of vertical domain large models typically follows a **four-layer architecture**:
+While general-purpose large models are powerful, they are often not specialized enough for specific domains (healthcare, law, finance, etc.). The construction of vertical domain large models, when broken down, can be understood through **four layers**:
 
 ```mermaid
 flowchart TB
