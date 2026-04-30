@@ -24,7 +24,7 @@
   - [2.3 Supervised Fine-Tuning (SFT): "On-the-Job Training" from Generalist to Specialist](#23-supervised-fine-tuning-sft-on-the-job-training-from-generalist-to-specialist)
   - [2.4 RLHF: Reinforcement Learning from Human Feedback — "Shaping Values"](#24-rlhf-reinforcement-learning-from-human-feedback--shaping-values)
   - [2.5 Knowledge Distillation: Large Models "Teaching" Small Models](#25-knowledge-distillation-large-models-teaching-small-models)
-  - [2.6 INT8 Quantization: Running Large Models on Phones](#26-int8-quantization-running-large-models-on-phones)
+  - [2.6 Model Quantization: Running Large Models on Phones](#26-model-quantization-running-large-models-on-phones)
   - [2.7 Four-Layer Architecture for Vertical Domain Models](#27-four-layer-architecture-for-vertical-domain-models)
   - [2.8 Code Example: Minimal PyTorch BERT Training Example](#28-code-example-minimal-pytorch-bert-training-example)
   - [2.9 Three-Stage Training Flowchart](#29-three-stage-training-flowchart)
@@ -510,7 +510,7 @@ DistilBERT is a benchmark case for knowledge distillation. It uses BERT-base as 
 
 What does this mean? In practical applications, DistilBERT can reduce deployment costs by more than half and inference latency by 60% while maintaining nearly identical performance. For production environments that need to process massive volumes of text, this is a huge cost saving.
 
-### 2.6 INT8 Quantization: Running Large Models on Phones (INT8量化：让大模型跑在手机上)
+### 2.6 Model Quantization: Running Large Models on Phones (模型量化：让大模型跑在手机上)
 
 Even after knowledge distillation, running a 66-million-parameter model on a phone remains challenging. **INT8 Quantization** is the key technology that solves this problem.
 
