@@ -529,14 +529,14 @@ A high-resolution photo might have 50 megapixels, but if you only need to view i
 
 **Real-World Results of On-Device Deployment**:
 
-Through INT8 quantization combined with other optimization techniques (such as KV-Cache optimization and speculative decoding), multiple 7B-parameter models have been successfully deployed on mobile devices by 2026:
+Through quantization combined with other optimization techniques (such as KV-Cache optimization and speculative decoding), multiple 7B-parameter models have been successfully deployed on mobile devices by 2026:
 
 - **INT8 Quantization**: Reduced from 14GB (FP16) to approximately 8-10GB (INT8), with minimal accuracy loss (<1%)
 - **INT4 Quantization**: Reduced from 14GB (FP16) to approximately 4-6GB (INT4), with acceptable accuracy loss (1-3%), enabling on-device deployment
 - **Inference Latency**: On-device deployment latency reduced by approximately 70% (compared to unoptimized FP16 version)
 - **Inference Speed**: Up to 18 tokens/s on flagship chips like Snapdragon 8 Gen3
 
-> **Real Case Study**: Qualcomm released a mobile LLM acceleration solution based on Matrix Extensions (QMX) in April 2026, improving Llama series model inference speed on mobile CPUs by 3-5 times. Combined with INT8 quantization, this achieved fluid on-device conversation experiences on mainstream Android phones for the first time.
+> **Real Case Study**: Qualcomm released a mobile LLM acceleration solution based on Matrix Extensions (QMX) in April 2026, improving Llama series model inference speed on mobile CPUs by 3-5 times. Combined with INT4 quantization, this achieved fluid on-device conversation experiences on mainstream Android phones for the first time.
 
 ### 2.7 Four Layers for Vertical Domain Models (垂直领域大模型四个层次)
 
