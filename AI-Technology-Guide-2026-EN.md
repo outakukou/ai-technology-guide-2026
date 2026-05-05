@@ -487,7 +487,7 @@ The training data for the reward model comes from human preference annotation. T
 2. Human annotators rank these answers by quality (ranking, not scoring)
 3. Use these ranking data to train the reward model, enabling it to predict "which answer humans prefer"
 
-> **Data Speaks**: Training a high-quality reward model typically requires about 50,000-100,000 human preference ranking data points. The annotation cost per data point is approximately $0.5-$2 (depending on complexity), meaning the data annotation cost for the reward model alone can reach $50,000-$200,000.
+> **Data Speaks**: Using InstructGPT's early experiments as a reference, training a high-quality reward model typically requires about 50,000-100,000 human preference ranking data points. The annotation cost per data point is approximately $0.5-$2 (depending on complexity), meaning the data annotation cost for the reward model alone can reach $50,000-$200,000. It's important to note that current mainstream large models typically use hundreds of thousands to millions of RLHF data points, and actual costs are significantly higher.
 
 ### 2.5 Knowledge Distillation: Large Models "Teaching" Small Models (知识蒸馏：大模型"教"小模型)
 
