@@ -25,7 +25,7 @@
   - [2.4 RLHF: Reinforcement Learning from Human Feedback — "Shaping Values"](#24-rlhf-reinforcement-learning-from-human-feedback--shaping-values)
   - [2.5 Knowledge Distillation: Large Models "Teaching" Small Models](#25-knowledge-distillation-large-models-teaching-small-models)
   - [2.6 Model Quantization: Running Large Models on Phones](#26-model-quantization-running-large-models-on-phones)
-  - [2.7 Four-Layer Architecture for Vertical Domain Models](#27-four-layer-architecture-for-vertical-domain-models)
+  - [2.7 Four Layers for Vertical Domain Models](#27-four-layers-for-vertical-domain-models)
   - [2.8 Code Example: Minimal PyTorch BERT Training Example](#28-code-example-minimal-pytorch-bert-training-example)
   - [2.9 Three-Stage Training Flowchart](#29-three-stage-training-flowchart)
   - [2.10 Chapter Summary](#210-chapter-summary)
@@ -538,7 +538,7 @@ Through INT8 quantization combined with other optimization techniques (such as K
 
 > **Real Case Study**: Qualcomm released a mobile LLM acceleration solution based on Matrix Extensions (QMX) in April 2026, improving Llama series model inference speed on mobile CPUs by 3-5 times. Combined with INT8 quantization, this achieved fluid on-device conversation experiences on mainstream Android phones for the first time.
 
-### 2.7 Four-Layer Architecture for Vertical Domain Models (垂直领域大模型四层架构)
+### 2.7 Four Layers for Vertical Domain Models (垂直领域大模型四个层次)
 
 While general-purpose large models are powerful, they are often not specialized enough for specific domains (healthcare, law, finance, etc.). The construction of vertical domain large models, when broken down, can be understood through **four layers**:
 
