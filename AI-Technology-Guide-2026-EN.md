@@ -1414,18 +1414,34 @@ sequenceDiagram
 }
 ```
 
-#### 4.2.5 MCP Ecosystem Status (2026) / MCP生态现状（2026年）
+#### 4.2.5 MCP Ecosystem Status (May 2026) / MCP生态现状（2026年5月）
 
-As of April 2026, the MCP ecosystem has achieved significant growth:
+As of May 2026, the MCP ecosystem has achieved significant growth:
 
 | Metric | Data |
 |------|------|
-| MCP-related repositories on GitHub | Over **12,000** |
-| Registered MCP Servers | Over **3,500** |
-| AI platforms supporting MCP | Claude, GPT, Gemini, Cursor, Windsurf, VS Code, and **20+** others |
+| MCP cumulative installations | Over **97 million** |
+| AAIF member companies | Over **170** (fastest-growing in Linux Foundation history) |
+| AI platforms supporting MCP | Claude, GPT, Gemini, Cursor, Windsurf, VS Code, and **all mainstream platforms** |
 | MCP protocol version | v1.2 (released March 2026) |
 
-**MCP has evolved from Anthropic's "proprietary protocol" into the "de facto standard" of the entire AI industry.** In December 2025, OpenAI announced full MCP protocol support for the GPT model family, marking MCP's official status as a cross-vendor universal standard.
+**Milestone: Linux Foundation AAIF Established**
+
+In December 2025, the Linux Foundation established the **Agentic AI Foundation (AAIF)**, with MCP as its flagship project. Founding members include:
+- **Anthropic**: Contributed MCP protocol
+- **OpenAI**: Contributed AGENTS.md
+- **Block**: Contributed goose open-source AI Agent framework
+- Plus Google, Microsoft, AWS, Cloudflare, Bloomberg, and others
+
+By April 2026, AAIF membership exceeded 170 companies, surpassing CNCF's growth rate to become the fastest-growing project in Linux Foundation history.
+
+**OpenAI Fully Embraces MCP**
+
+OpenAI announced plans to deprecate Assistants API in mid-2026 and fully migrate to the MCP protocol. This means MCP has evolved from Anthropic's "proprietary protocol" into the "de facto standard" of the entire AI industry.
+
+**Security Challenges**
+
+In January-February 2026, researchers submitted **over 30 CVE vulnerabilities**, including a CVSS 9.6 remote code execution vulnerability. This reminds enterprise users: while embracing MCP, proper security auditing and vulnerability management are essential.
 
 ---
 
