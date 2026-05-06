@@ -896,6 +896,15 @@ Prompt Engineering is not about "stacking keywords" — it is a systematic metho
 
 **Effectiveness Data**: Google reported in a 2024 paper that CoT improved accuracy from **58%** to **92%** on mathematical reasoning tasks (GSM8K benchmark). By 2026, CoT has become the "standard" technique for all complex reasoning tasks.
 
+**2026 Advancement: CoT-SC (Self-Consistency Chain of Thought)**
+Beyond basic CoT, a more advanced approach is CoT-SC — generating multiple independent reasoning chains and selecting the most consistent answer through majority voting. This significantly reduces random errors and is particularly effective in complex reasoning tasks.
+
+**CoT Engineered into AI Coding Tools**
+The CoT philosophy has been engineered into AI coding tools (like Trae, Cursor) as "Plan mode" and "Spec mode":
+- **Normal mode**: AI writes code directly (equivalent to giving the answer without showing work)
+- **Plan mode** (`/plan`): AI outputs a plan document first — goals, scope, steps — then executes according to plan
+- **Spec mode** (`/spec`): Generates requirements outline, task list, and acceptance criteria — taking "think before you act" to the extreme
+
 > **Correction**: Many people think CoT simply means adding "please think step by step" at the end of a Prompt. In reality, high-quality CoT requires **structurally decomposing the problem**, clearly defining the reasoning goal and constraints at each step. A simple "think step by step" works for simple problems, but is far from sufficient for complex engineering problems.
 
 ---
@@ -910,23 +919,23 @@ The unit of measurement for the context window is **Tokens**. One Token is appro
 - In English: 0.75 words (about 4 characters)
 - In Chinese: about 1-2 characters
 
-Below is a comparison of context windows among mainstream large models in 2026:
+Below is a comparison of context windows among mainstream large models (as of May 2026):
 
 ```mermaid
 xychart-beta
-    title "2026年主流大模型上下文窗口对比（单位：K Tokens）"
-    x-axis ["GPT-5", "Claude 4", "DeepSeek V4", "Gemini 2.0 Pro", "Gemini 1.5 Pro"]
-    y-axis "上下文窗口（K Tokens）" 0 --> 1200
-    bar [256, 200, 128, 1000, 1000]
+    title "Mainstream LLM Context Window Comparison, May 2026 (K Tokens)"
+    x-axis ["DeepSeek V4", "Claude Opus 4.7", "GPT-5.5", "Gemini 3 Pro", "Llama 4 Scout"]
+    y-axis "Context Window (K Tokens)" 0 --> 12000
+    bar [128, 200, 256, 2000, 10000]
 ```
 
 | Model | Context Window | Approximate Content Capacity |
 |-------|---------------|------------------------------|
-| GPT-5 | 256K tokens | ~200,000 characters (a medium-length book) |
-| Claude 4 | 200K tokens | ~160,000 characters |
 | DeepSeek V4 | 128K tokens | ~100,000 characters |
-| Gemini 2.0 Pro | 1M tokens | ~800,000 characters (2-3 thick books) |
-| Gemini 1.5 Pro | 1M tokens | ~800,000 characters |
+| Claude Opus 4.7 | 200K tokens (1M beta) | ~160,000 characters |
+| GPT-5.5 Thinking | 256K tokens (128K input + 128K output) | ~200,000 characters (a medium-length book) |
+| Gemini 3 Pro | 2M tokens | ~1.6M characters (2-3 thick books) |
+| Llama 4 Scout | 10M tokens | ~8M characters (dozens of novels), largest open-source |
 
 #### Is a Larger Context Window Always Better?
 
@@ -938,7 +947,7 @@ A larger context window means AI can "see" more information, but that doesn't me
 
 **First, "needle in a haystack" accuracy drops.** When the context window expands from 32K to 1M, the AI's accuracy in precisely locating a specific piece of information from massive text significantly decreases. Anthropic's research shows that in a 128K context, Claude's "needle in a haystack" accuracy is **99.2%**; but in a 200K context, this figure drops to **96.5%**.
 
-**Second, costs grow linearly.** Every Token in the context window costs money. Taking GPT-5 as an example, input cost is approximately $2.5/million Tokens and output cost is approximately $10/million Tokens. If you fill a 1M Token context, the input cost for a single conversation alone reaches **$2.5** — which is unacceptable for high-frequency enterprise applications.
+**Second, costs grow linearly.** Every Token in the context window costs money. Taking GPT-5.5 as an example, input cost is approximately $2.5/million Tokens and output cost is approximately $10/million Tokens. If you fill a 1M Token context, the input cost for a single conversation alone reaches **$2.5** — which is unacceptable for high-frequency enterprise applications.
 
 **Third, inference latency increases.** The longer the context, the longer the AI's "prefill" phase takes. In a 1M Token context, the first-Token latency can reach **30-60 seconds**, which is unacceptable in real-time interaction scenarios.
 
