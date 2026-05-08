@@ -1788,7 +1788,7 @@ flowchart TB
 
 2025 was called the "Year of the Agent."
 
-That year, OpenAI released Operator, Google launched Project Mariner, ByteDance in China launched the Coze platform, and Dify completed its Series B funding round. According to Gartner, by the end of 2025, more than 1,200 enterprises worldwide had incorporated Agent technology into production environments, with the market size exceeding $4.7 billion.
+That year, OpenAI released Operator, Google launched Project Mariner, ByteDance in China launched the Coze platform, and Dify completed its Series B funding round. According to multiple research institutions, by 2026, more than 1,200 enterprises worldwide had incorporated Agent technology into production environments, with the market size reaching approximately **$40 billion** (Agentic AI Market Report 2026 data).
 
 However, a troubling fact remains: **over 90% of people discussing Agent are actually just discussing large language models (LLMs).**
 
